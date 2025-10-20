@@ -7,4 +7,8 @@ sagemaker <- import('sagemaker')
 session <- sagemaker$Session()
 
 path <- "s3://xx.csv"
-df <- read_csv(file=sagemkaer$s3$S3Downloader$read_file(path, sagemaker_session = session), show_col_types = FALSE, na = '')
+df <- read_csv(
+  file = sagemaker$s3$S3Downloader$read_file(path, sagemaker_session = session), 
+  show_col_types = FALSE, 
+  na = ''
+)
